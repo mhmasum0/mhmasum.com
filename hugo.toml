@@ -1,0 +1,9 @@
+baseURL = 'https://mhmasum.com/'
+languageCode = 'en-us'
+title = 'Mahmudul Hasan'
+
+theme = 'my-theme'
+summaryLength = 20
+
+[params]
+  name = "Mahmudul Hasan"

@@ -1,0 +1,35 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+
+
+[params]
+  email = 'mahmudul006@gmail.com'
+  display_toc = true
+  [params.about]
+    name = 'Mahmudul Hasan'
+    
+[menus]
+
+[[menus.main]]
+  name = 'Home'
+  pageRef = '/'
+  weight = 1
+[[menus.main]]
+  name = 'About'
+  pageRef = '/about'
+  weight = 2
+[[menus.main]]
+  name = 'Posts'
+  pageRef = '/posts'
+  weight = 3
+[[menus.main]]
+  name = 'Uses'
+  pageRef = '/uses'
+  weight = 4
+
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"

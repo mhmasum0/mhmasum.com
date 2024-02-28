@@ -1,0 +1,12 @@
+<section class="projects">
+  <h2>Projects</h2>
+  <ul>
+    {{ range .Site.Data.projects }}
+    <li>
+      <h3>{{ .name }}</h3>
+      <p>{{ .description }}</p>
+    </li>
+    {{ end }}
+  </ul> 
+</section>
+

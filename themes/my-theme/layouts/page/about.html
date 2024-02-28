@@ -1,0 +1,8 @@
+{{ define "main" }}
+<h1 class="text-xl text-center font-bold py-8">{{ .Title }}</h1>
+<!-- <img src-"/img/portfolio-image.jpg" alt="portrait" class="w-32 h-32 rounded-full mx-auto"> -->
+<img src="/img/portfolio-image.jpg" alt="GitHub" class="rounded-lg mx-auto mb-3">
+<article class="prose mx-auto max-w-screen-md bg-white px-4 prose-a:text-blue-600 hover:prose-a:text-blue-500">
+  {{ .Content }}
+</article>
+{{ end }}

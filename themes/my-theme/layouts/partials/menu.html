@@ -1,0 +1,11 @@
+{{ with site.Menus.main }}
+  <nav class="menu border border-[#E7E7E7] hover:border-indigo-300 shadow-md shadow-[rgba(231,231,231,1)_1px_1px_10px_1px] rounded-full flex items-center justify-center txt-[#27272A]">
+    {{ range . }}
+      {{ if $.IsMenuCurrent .Menu . }}
+        <a class="active" aria-current="page" href="{{ .URL }}">{{ .Name }}</a>
+      {{ else }}
+        <a class="py-3 px-3 first:pl-6 last:pr-6 text-base hover:text-blue-600" href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+    {{ end }}
+  </nav>
+{{ end }}
