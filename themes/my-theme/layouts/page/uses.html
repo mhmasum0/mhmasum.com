@@ -6,23 +6,23 @@
         <img class="headshot img-thumbnail"  src="{{ . }}" alt="desk" width="1000" height="563">
     {{ end }}
 
-    <h1 class="py-5 text-xl font-bold"> {{ .Params.Dev.Title }} </h1>
+    <h1 class="py-5 text-xl font-bold"> {{ .Params.dev.Title }} </h1>
     <ul class="list-image-[url(checkmark.png)]">
-    {{ range .Params.Developer_Environment }}
+    {{ range .Params.dev.Developer_Environment }}
         <li class="text-lg py-1">{{ .category }}: <a class="text-blue-700 font-semi-bold" href="{{ .link }}" target="_blank">{{ .tool }}</a></li>
     {{ end }}
     </ul>
 
-    <h1 class="py-5 text-xl font-bold"> {{ .Params.Software.Title }} </h1>
+    <h1 class="py-5 text-xl font-bold"> {{ .Params.software.Title }} </h1>
     <ul>
-    {{ range .Params.Softwares }}
+    {{ range .Params.software.Softwares }}
         <li class="text-lg">{{ .category }}: <a class="text-blue-700 font-semi-bold" href="{{ .link }}" target="_blank">{{ .tool }}</a></li>
     {{ end }}
     </ul>
 
-    <h1 class="py-5 text-xl font-bold"> {{ .Params.Software.Title }} </h1>
+    <h1 class="py-5 text-xl font-bold"> {{ .Params.hardware.Title }} </h1>
     <ul>
-    {{ range .Params.Hardwares }}
+    {{ range .Params.hardware.Hardwares }}
         <li class="text-lg">{{ .category }}: <a class="text-blue-700 font-semi-bold" href="{{ .link }}" target="_blank">{{ .tool }}</a></li>
     {{ end }}
     </ul>

@@ -1,17 +1,23 @@
 {{ define "main" }}
-  <h1 class="text-center font-bold text-5xl py-5">{{ .Title }}</h1>
+  <h1 class="font-bold text-5xl py-5">{{ .Title }}</h1>
   <!-- {{ .Content }} -->
-<section class="mb-32 grid items-stretch gap-4 sm:grid-cols-2 sm:gap-8">
+<section class="mb-24 grid items-stretch gap-4 sm:grid-cols-2 sm:gap-8">
   {{ range .Pages }}
-  <div class="relative flex flex-col justify-end rounded-lg px-4 py-4 shadow-md md:px-6 bg-[#F2F9FE]">    
+  <div class="relative flex flex-col rounded-lg px-4 py-4 shadow-md md:px-6 bg-[#F2F9FE]">    
     <h2 class="mb-2 mr-4 text-xl font-extrabold leading-tight"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-    {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-    {{ $dateHuman := .Date | time.Format ":date_long" }}
+    <p class="mb-4 text-gray-600">{{ .Summary }}</p>
 
-    <div class="flex">
+    <div class="flex items-center">
       <img class="h-4" height="1em" src="/img/calendar.svg" alt="calender">
-      <time class="pl-2" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+      {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+      {{ $dateHuman := .Date | time.Format ":date_long" }}
+      <time class="ml-2" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+     <!-- categories  -->
+      <div class=" place-self-auto flex items-center space-x-2">
+        {{ range .Params.categories }}
+          <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" class="text-blue-500 hover:underline">{{ . }}</a>
+        {{ end }}
+      </div>
     </div>
   </div>
   {{ end }}

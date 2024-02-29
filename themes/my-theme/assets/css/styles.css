@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 /* Your custom styles here */
+a {
+  @apply underline;
+}
+::selection {
+  background-color: #a5b4fc;
+  color: #f5f3ff;
+}
+
 .content-wrapper {
   background-color: #EFF2FE;
   padding: 2rem;

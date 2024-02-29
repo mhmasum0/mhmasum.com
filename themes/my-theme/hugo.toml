@@ -4,7 +4,7 @@ title = 'My New Hugo Site'
 
 
 [params]
-  email = 'mahmudul006@gmail.com'
+  email = 'mail@mhmasum.com'
   display_toc = true
   [params.about]
     name = 'Mahmudul Hasan'
