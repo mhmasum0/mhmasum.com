@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 /* Your custom styles here */
+body {
+  background-color: #E9F7F5;
+}
 a {
   @apply underline;
 }
